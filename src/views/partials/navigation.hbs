@@ -1,0 +1,101 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img src="/img/logo_P.PNG" style="display: inline-block; height: 50px;"> DiaryCalendar
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"> 
+            <a class="nav-link" href="/who">Info</a>
+          </li>
+        </ul>
+        {{#if user}}
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+          2021
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/calendar/2021/months/Enero">Enero</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Febrero">Febrero</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Marzo">Marzo</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Abril">Abril</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Mayo">Mayo</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Junio">Junio</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Julio">Julio</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Agosto">Agosto</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Septiembre">Septiembre</a> 
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Octubre">Octubre</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Noviembre">Noviembre</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2021/months/Diciembre">Diciembre</a>                                                                                  
+          </div>
+        </li> 
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+          2022
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/calendar/2022/months/Enero">Enero</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Febrero">Febrero</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Marzo">Marzo</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Abril">Abril</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Mayo">Mayo</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Junio">Junio</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Julio">Julio</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Agosto">Agosto</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Septiembre">Septiembre</a> 
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Octubre">Octubre</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Noviembre">Noviembre</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/calendar/2022/months/Diciembre">Diciembre</a>                                                                                  
+          </div>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="/profile">{{user.username}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        {{else}}
+        <div class="ms-auto">
+          <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" href="/signin">SignIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup">SignUp</a>
+        </li>
+        </ul>
+        </div>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,43 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="container text-center my-auto">
+            <h1 class="mb-5">
+                <em>{{dataI.number}}/ {{dataI.Nombre}}/ {{dataI.Nom}}</em>
+            </h1>
+        </div>
+        {{#each acts}}
+            <div class="col-md-3 mt-2">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3 class="card-title text-uppercase">
+                        {{Title}}
+                    </h3>
+                    <p class="m-2">{{Descrip}}</p>
+                    <p class="text-muted">
+                        Inicio: {{timeago H_ini}}
+                    </p>
+                    <p class="text-muted">
+                        Fin: {{timeago H_fin}}
+                    </p>
+                    <a class="btn btn-primary" href= "acts/notes/{{ID_Act}}">
+                        Notas
+                    </a>
+                    <a class="btn btn-secondary" href="acts/edit/{{ID_Act}}">
+                    Editar
+                    </a>
+                    <a class="btn btn-danger" href="acts/delete/{{ID_Act}}">
+                        Borrar
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+        <div class="col-md-3 mt-2">
+            <div class="card card-body text-center">
+                <h4>Agrega una Actividad!</h4>
+                <a href={{puente}}><img src="/img/Plus.png" alt="add" class="card-img-top mx-auto m-2 rounded-circle w-50"></a>
+            </div>
+        </div>
+    </div>
+</div>
+

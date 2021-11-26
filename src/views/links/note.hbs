@@ -1,0 +1,38 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card card text-center">
+                <div class="card-body">
+                    <h2 class="card-title text-uppercase">
+                        {{consul.Title}}{{regre.ID_Act}}
+                    </h2>
+                    <p class="m-2">{{consul.Descrip}}</p>
+                    <form action="/calendar/:Nom/months/:Nombre/:number/acts/notes/{{regre.ID_Act}}" method="POST">
+                        <div class="form-group">
+                            <br><textarea name="anota" rows="12" class="form-control" placeholder="Apuntes">{{consul.Apunte}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="cal" value="{{regre.Nom}}" class= "form-control">
+                            <input type="hidden" name="num" value="{{regre.number}}" class="form-control">
+                            <input type="hidden" name="nomM" value="{{regre.Nombre}}" class="form-control">
+                            <input type="hidden" name="ind" value="{{flag}}" class="form-control">
+                            <input type="hidden" name="ID_Nota" value="{{consul.ID_Nota}}" class="form-control">
+                         </div>                     
+                        <div class="form-group">
+                            <br><button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{!-- PLAN FUTURO DE GUARDAR IMAGENES MAS NO EN BASE DE DATOS
+        <div class="col-md-4 mx-auto mt-4">
+            <div class="card card-body text-center">
+                <p>Revisa o Guardas las imagenes<br> de esta actividad!</p>
+                <a class="btn btn-primary" href="/calendar/{{regre.Nom}}/months/{{regre.Nombre}}/{{regre.number}}/acts/notes/{{regre.ID_Act}}/images">Vamos!</a>
+            </div>
+        </div>--}}
+    </div>
+</div>
